@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cyberBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121624"/>
+      <stop offset="100%" stop-color="#090b12"/>
+    </linearGradient>
+    <linearGradient id="coralShield" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff3d5a"/>
+      <stop offset="100%" stop-color="#ff7b91"/>
+    </linearGradient>
+    <linearGradient id="matrixCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="100%" stop-color="#4facfe"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#cyberBg)"/>
+  
+  <!-- Subtle cyber grid -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="50" y1="0" x2="50" y2="480"/>
+    <line x1="150" y1="0" x2="150" y2="480"/>
+    <line x1="250" y1="0" x2="250" y2="480"/>
+    <line x1="350" y1="0" x2="350" y2="480"/>
+    <line x1="450" y1="0" x2="450" y2="480"/>
+    <line x1="550" y1="0" x2="550" y2="480"/>
+    <line x1="650" y1="0" x2="650" y2="480"/>
+    <line x1="750" y1="0" x2="750" y2="480"/>
+    <line x1="0" y1="80" x2="800" y2="80"/>
+    <line x1="0" y1="160" x2="800" y2="160"/>
+    <line x1="0" y1="240" x2="800" y2="240"/>
+    <line x1="0" y1="320" x2="800" y2="320"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+  </g>
+  
+  <!-- Ambient radar glow -->
+  <circle cx="580" cy="240" r="180" fill="#ff3d5a" opacity="0.07" filter="blur(60px)"/>
+  <circle cx="220" cy="200" r="160" fill="#00f2fe" opacity="0.05" filter="blur(50px)"/>
+  
+  <!-- Concentric Security Radar Rings -->
+  <circle cx="580" cy="240" r="150" stroke="#ff3d5a" stroke-opacity="0.15" stroke-width="1.5" fill="none" stroke-dasharray="8 6"/>
+  <circle cx="580" cy="240" r="105" stroke="url(#matrixCyan)" stroke-opacity="0.3" stroke-width="1.5" fill="none"/>
+  <circle cx="580" cy="240" r="60" stroke="#ff3d5a" stroke-opacity="0.5" stroke-width="2" fill="none"/>
+  
+  <!-- Radar Sweep Arm -->
+  <line x1="580" y1="240" x2="710" y2="170" stroke="#ff3d5a" stroke-width="2.5" stroke-linecap="round"/>
+  
+  <!-- Cyber Shield in Center of Radar -->
+  <path d="M580 195 L615 210 L615 250 C615 275 580 295 580 295 C580 295 545 275 545 250 L545 210 Z" fill="rgba(255, 61, 90, 0.2)" stroke="url(#coralShield)" stroke-width="2.5"/>
+  <circle cx="580" cy="245" r="7" fill="#ff3d5a"/>
+
+  <!-- Threat Detected Ping -->
+  <circle cx="670" cy="210" r="6" fill="#ff3d5a"/>
+  <circle cx="670" cy="210" r="14" stroke="#ff3d5a" stroke-width="1.5" fill="none" opacity="0.8"/>
+  <text x="685" y="214" fill="#ff3d5a" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">SUSPICIOUS_TX: #8492</text>
+
+  <!-- Left: Digital Banking Transaction Stream -->
+  <rect x="60" y="110" width="360" height="260" rx="12" fill="#151928" stroke="#ffffff" stroke-opacity="0.12"/>
+  <line x1="60" y1="150" x2="420" y2="150" stroke="#ffffff" stroke-opacity="0.08"/>
+  <circle cx="85" cy="130" r="4" fill="#ff5f56"/>
+  <circle cx="100" cy="130" r="4" fill="#ffbd2e"/>
+  <circle cx="115" cy="130" r="4" fill="#27c93f"/>
+  <text x="140" y="134" fill="#9da3b4" font-family="'JetBrains Mono', monospace" font-size="10">banking_stream.log • AI Model Status: ACTIVE</text>
+
+  <!-- Log Entries -->
+  <text x="85" y="180" fill="#27c93f" font-family="'JetBrains Mono', monospace" font-size="11">[09:41:02] TX_VALID: ₹4,500 NEFT (Score: 0.02)</text>
+  <text x="85" y="210" fill="#27c93f" font-family="'JetBrains Mono', monospace" font-size="11">[09:41:14] TX_VALID: ₹12,000 IMPS (Score: 0.05)</text>
+  <rect x="75" y="228" width="330" height="32" rx="6" fill="rgba(255, 61, 90, 0.15)" stroke="#ff3d5a" stroke-opacity="0.4"/>
+  <text x="85" y="249" fill="#ff3d5a" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">[09:41:25] ⚠️ ANOMALY_FLAG: ₹4,80,000 GEO-DRIFT (0.94)</text>
+  <text x="85" y="285" fill="#27c93f" font-family="'JetBrains Mono', monospace" font-size="11">[09:41:31] TX_VALID: ₹850 UPI (Score: 0.01)</text>
+  <text x="85" y="315" fill="#00f2fe" font-family="'JetBrains Mono', monospace" font-size="11">[09:41:40] ISOLATION_FOREST: 1 Threat Blocked</text>
+  <text x="85" y="345" fill="#9da3b4" font-family="'JetBrains Mono', monospace" font-size="10">Latency: 28ms • ROC-AUC: 96.8% • Python / AI</text>
+
+  <!-- Top Badges -->
+  <rect x="60" y="45" width="220" height="30" rx="15" fill="#ff3d5a" fill-opacity="0.15" stroke="#ff3d5a" stroke-opacity="0.4"/>
+  <text x="170" y="65" fill="#ff3d5a" font-family="'Poppins', sans-serif" font-size="11" font-weight="700" text-anchor="middle">IBM SKILLSBUILD INTERNSHIP</text>
+
+  <rect x="295" y="45" width="165" height="30" rx="15" fill="#00f2fe" fill-opacity="0.12" stroke="#00f2fe" stroke-opacity="0.3"/>
+  <text x="377" y="65" fill="#00f2fe" font-family="'Poppins', sans-serif" font-size="11" font-weight="600" text-anchor="middle">AI / CYBERSECURITY</text>
+
+  <!-- Title Bottom -->
+  <text x="60" y="420" fill="#ffffff" font-family="'Poppins', sans-serif" font-size="20" font-weight="800">AI Cyber Threat &amp; Anomaly Detection</text>
+  <text x="60" y="445" fill="#9da3b4" font-family="'Poppins', sans-serif" font-size="13">Digital Banking Anomaly Modeling with Python &amp; Scikit-Learn</text>
+</svg>

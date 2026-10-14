@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141724"/>
+      <stop offset="100%" stop-color="#0a0c13"/>
+    </linearGradient>
+    <linearGradient id="cyan4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="100%" stop-color="#4facfe"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg4)"/>
+  
+  <!-- Neural Net Matrix Illustration -->
+  <circle cx="300" cy="180" r="140" fill="#ff3d5a" opacity="0.05" filter="blur(50px)"/>
+  
+  <!-- Bounding Box Targeting Object -->
+  <rect x="200" y="100" width="200" height="170" rx="8" fill="none" stroke="#ff3d5a" stroke-width="2" stroke-dasharray="8 6"/>
+  
+  <!-- Corner Crosshairs -->
+  <path d="M190 120 L190 90 L220 90 M380 90 L410 90 L410 120 M190 250 L190 280 L220 280 M380 280 L410 280 L410 250" stroke="#ff3d5a" stroke-width="3" fill="none"/>
+  
+  <!-- AI Classification Tag -->
+  <rect x="200" y="70" width="150" height="24" rx="4" fill="#ff3d5a"/>
+  <text x="275" y="86" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" text-anchor="middle">OBJECT: 98.4% ACC</text>
+
+  <!-- Neural Nodes in center -->
+  <circle cx="260" cy="185" r="12" fill="#1b2033" stroke="url(#cyan4)" stroke-width="2"/>
+  <circle cx="340" cy="185" r="12" fill="#1b2033" stroke="#ff3d5a" stroke-width="2"/>
+  <line x1="272" y1="185" x2="328" y2="185" stroke="#ffffff" stroke-opacity="0.3" stroke-width="2"/>
+
+  <!-- Badge -->
+  <rect x="50" y="35" width="115" height="28" rx="14" fill="#ff3d5a" fill-opacity="0.15" stroke="#ff3d5a" stroke-opacity="0.4"/>
+  <text x="107" y="53" fill="#ff3d5a" font-family="'Poppins', sans-serif" font-size="11" font-weight="600" text-anchor="middle">COMPUTER VISION</text>
+  
+  <text x="50" y="350" fill="#ffffff" font-family="'Poppins', sans-serif" font-size="18" font-weight="700">Image Classifier &amp; Vision</text>
+  <text x="50" y="372" fill="#9da3b4" font-family="'Poppins', sans-serif" font-size="12">Convolutional Neural Networks, OpenCV &amp; Deep Learning</text>
+</svg>

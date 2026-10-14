@@ -1,0 +1,183 @@
+export const portfolioData = {
+  personal: {
+    name: "Chetana Kolhe",
+    shortName: "Chetana Kolhe",
+    role: "B.Tech in Artificial Intelligence & Data Science",
+    headline: "AI & Data Science Undergraduate @ RCPIT Shirpur | Virtual Intern @ BharatCares",
+    college: "R. C. Patel Institute of Technology (RCPIT), Shirpur",
+    degree: "Bachelor of Technology in Artificial Intelligence and Data Science",
+    academicYears: "2025 – November 2029",
+    location: "Shirpur, Maharashtra, India",
+    email: "chetana9960@gmail.com",
+    phone: "+91-9960757106",
+    linkedin: "https://www.linkedin.com/in/chetanakolhe-175826397",
+    linkedinDisplay: "linkedin.com/in/chetanakolhe-175826397",
+    github: "https://github.com/chetanak21",
+    githubDisplay: "github.com/chetanak21",
+    codechef: "https://www.codechef.com/users/chetana_kolhe",
+    codechefUsername: "chetana_kolhe",
+    codechefRating: "799 (1★)",
+    codechefRank: "Global Rank: 11,905 (Starters 219)",
+    codechefDivision: "Div 4 (Bronze League)",
+    codechefProblems: "888 Problems Solved",
+    statusBadge: "Seeking AI / Data Science Internships",
+    careerObjective:
+      "Motivated AI & Data Science engineering undergraduate, passionate about programming, data-driven technologies, and problem-solving. Building hands-on experience in data analytics, predictive modeling, and machine learning through an active internship, alongside a foundation in digital marketing. Seeking an entry-level role or internship to apply technical and analytical skills toward organizational growth.",
+  },
+
+  skills: {
+    languages: ["Python", "Java", "C"],
+    dataAndAI: [
+      "Data Analytics",
+      "Predictive Modeling",
+      "Machine Learning (Foundational)",
+      "Data Structures & Algorithms",
+      "Logic Building & Problem Solving",
+    ],
+    toolsAndWeb: [
+      "HTML5",
+      "CSS3",
+      "Git & GitHub",
+      "VS Code",
+      "MS Excel",
+      "MS Word",
+    ],
+    softSkills: [
+      "Teamwork & Collaboration",
+      "Effective Communication",
+      "Visual Communication & Graphic Design",
+      "Adaptability & Problem Solving",
+    ],
+  },
+
+  internships: [
+    {
+      id: "bharatcares",
+      role: "Data Analytics with AI — Virtual Intern",
+      organization: "BharatCares",
+      collaboration: "In collaboration with AICTE & IBM SkillsBuild",
+      period: "August 2026 – Present (2 months)",
+      location: "Shirpur, Maharashtra",
+      type: "Virtual Internship",
+      badge: "Current Internship",
+      highlights: [
+        "Undergoing an intensive 6-week virtual internship on Data Analytics with AI offered by BharatCares in collaboration with AICTE & IBM SkillsBuild.",
+        "Building foundational knowledge in Data Analytics, Predictive Modeling, and Machine Learning using AI tools.",
+        "Developing practical project solutions aligned with UN Sustainable Development Goals (UN SDGs).",
+        "Gaining hands-on practical exposure through IBM SkillsBuild & AICTE masterclasses.",
+      ],
+      technologies: ["Data Analytics", "AI Tools", "Predictive Modeling", "Python", "UN SDGs", "IBM SkillsBuild"],
+      projectShowcase: {
+        title: "UN SDGs Data Analytics Project",
+        description: "Project solution developed during the BharatCares (AICTE & IBM SkillsBuild) internship, applying data analytics and AI tools to analyze key indicators aligned with UN Sustainable Development Goals.",
+        githubUrl: "https://github.com/chetanak21",
+      },
+    },
+    {
+      id: "aaditya-coep",
+      role: "Marketing Intern",
+      organization: "Aaditya COEP",
+      collaboration: "Pune District",
+      period: "December 2025 – April 2026 (5 months)",
+      location: "Pune District, Maharashtra",
+      type: "Internship",
+      badge: "Completed",
+      highlights: [
+        "Developed and executed social media strategies to promote educational content and expand platform reach.",
+        "Created visually appealing banners and graphics to boost audience engagement.",
+        "Collaborated with cross-functional teams to brainstorm creative digital marketing campaigns.",
+      ],
+      technologies: ["Digital Marketing", "Social Media Strategy", "Graphic Design", "Team Collaboration"],
+    },
+  ],
+
+  projects: [
+    {
+      id: "un-sdg-project",
+      title: "Data Analytics with AI — UN SDGs Solution",
+      category: "Data Analytics & AI",
+      organization: "BharatCares & IBM SkillsBuild Internship",
+      description:
+        "Practical project solution developed as part of the AICTE & IBM SkillsBuild virtual internship program. Focuses on data exploration, predictive modeling, and analytics aligned with UN Sustainable Development Goals.",
+      tags: ["Python", "Data Analytics", "Predictive Modeling", "IBM SkillsBuild", "UN SDGs"],
+      githubUrl: "https://github.com/chetanak21",
+    },
+    {
+      id: "dsa-repo",
+      title: "DSA & Core Problem Solving Implementations",
+      category: "Data Structures & Algorithms",
+      organization: "Coursework & Certifications",
+      description:
+        "Comprehensive collection of fundamental data structures and algorithms written in C and Java, emphasizing memory management, complexity optimization, and algorithmic logic.",
+      tags: ["C", "Java", "DSA", "Algorithms", "Problem Solving"],
+      githubUrl: "https://github.com/chetanak21",
+    },
+    {
+      id: "portfolio-web",
+      title: "Personal Engineering Portfolio",
+      category: "Web Development",
+      organization: "Personal Project",
+      description:
+        "Clean, responsive, dark-mode portfolio website developed with modern React and Tailwind CSS to showcase academic coursework, internship projects, and verified certifications.",
+      tags: ["React", "Tailwind CSS", "JavaScript", "Responsive Design"],
+      githubUrl: "https://github.com/chetanak21",
+    },
+  ],
+
+  education: [
+    {
+      degree: "Bachelor of Technology in Artificial Intelligence and Data Science",
+      institution: "R. C. Patel Institute of Technology (RCPIT)",
+      location: "Shirpur, Maharashtra, India",
+      period: "2025 – November 2029",
+      status: "Currently Pursuing (Second Year)",
+      details: "Comprehensive coursework in AI, Data Science, Machine Learning, Data Structures & Algorithms, and Mathematics.",
+      badge: "Undergraduate Degree",
+    },
+    {
+      degree: "Higher Secondary Certificate (HSC)",
+      institution: "Rashtriya Junior College",
+      location: "Chalisgaon, Maharashtra",
+      period: "2024 – 2025",
+      score: "72%",
+      details: "Science stream with focus on Mathematics, Physics, and Chemistry.",
+      badge: "HSC (12th)",
+    },
+    {
+      degree: "Secondary School Certificate (SSC)",
+      institution: "ABC High School",
+      location: "Shirpur, Maharashtra",
+      period: "2022 – 2023",
+      score: "83%",
+      details: "Completed secondary education with distinction.",
+      badge: "SSC (10th)",
+    },
+  ],
+
+  certifications: [
+    {
+      title: "Data Analytics with AI",
+      issuer: "AICTE | IBM SkillsBuild",
+      date: "2026",
+      description: "Foundational training in artificial intelligence tools, predictive modeling, and data analytics pipelines.",
+    },
+    {
+      title: "DSA in C",
+      issuer: "Learn C Programming",
+      date: "2025",
+      description: "Certificate for completing all lessons and practice problem-solving projects in C programming.",
+    },
+    {
+      title: "Learn Java Programming",
+      issuer: "Java Programming Program",
+      date: "2025",
+      description: "Certificate for completing comprehensive lessons and practice projects in Java OOP.",
+    },
+    {
+      title: "Intro to Git",
+      issuer: "Version Control",
+      date: "2025",
+      description: "Proficiency in Git version control, branching, repository management, and GitHub collaboration.",
+    },
+  ],
+}

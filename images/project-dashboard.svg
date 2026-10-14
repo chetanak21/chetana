@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141724"/>
+      <stop offset="100%" stop-color="#0a0c13"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg5)"/>
+  
+  <!-- Dashboard UI Mockup -->
+  <rect x="80" y="80" width="440" height="210" rx="12" fill="#161926" stroke="#ffffff" stroke-opacity="0.1"/>
+  
+  <!-- Top bar -->
+  <line x1="80" y1="115" x2="520" y2="115" stroke="#ffffff" stroke-opacity="0.08"/>
+  <circle cx="105" cy="98" r="4" fill="#ff5f56"/>
+  <circle cx="120" cy="98" r="4" fill="#ffbd2e"/>
+  <circle cx="135" cy="98" r="4" fill="#27c93f"/>
+  
+  <!-- Stat Cards Inside Mockup -->
+  <rect x="100" y="130" width="90" height="45" rx="6" fill="#1d2235" stroke="#ff3d5a" stroke-opacity="0.4"/>
+  <rect x="205" y="130" width="90" height="45" rx="6" fill="#1d2235" stroke="#ffffff" stroke-opacity="0.08"/>
+  <rect x="310" y="130" width="90" height="45" rx="6" fill="#1d2235" stroke="#ffffff" stroke-opacity="0.08"/>
+  
+  <!-- Graph inside Dashboard -->
+  <path d="M100 240 Q 180 180, 260 210 T 420 170 T 500 150" fill="none" stroke="#ff3d5a" stroke-width="3"/>
+  <path d="M100 240 Q 180 180, 260 210 T 420 170 T 500 150 L500 270 L100 270 Z" fill="#ff3d5a" opacity="0.08"/>
+
+  <!-- Badge -->
+  <rect x="50" y="35" width="135" height="28" rx="14" fill="#ff3d5a" fill-opacity="0.15" stroke="#ff3d5a" stroke-opacity="0.4"/>
+  <text x="117" y="53" fill="#ff3d5a" font-family="'Poppins', sans-serif" font-size="11" font-weight="600" text-anchor="middle">DATA DASHBOARD</text>
+  
+  <text x="50" y="350" fill="#ffffff" font-family="'Poppins', sans-serif" font-size="18" font-weight="700">Interactive Data Insights Hub</text>
+  <text x="50" y="372" fill="#9da3b4" font-family="'Poppins', sans-serif" font-size="12">Power BI, Python Dash &amp; Modern Interactive Visualizations</text>
+</svg>

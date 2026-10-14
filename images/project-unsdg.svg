@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141724"/>
+      <stop offset="100%" stop-color="#0a0c13"/>
+    </linearGradient>
+    <linearGradient id="coralGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff3d5a"/>
+      <stop offset="100%" stop-color="#ff7b91"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d2ff"/>
+      <stop offset="100%" stop-color="#3a7bd5"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg1)"/>
+  <circle cx="100" cy="80" r="140" fill="#ff3d5a" opacity="0.08" filter="blur(40px)"/>
+  <circle cx="500" cy="320" r="160" fill="#00d2ff" opacity="0.08" filter="blur(50px)"/>
+  
+  <!-- Grid Lines -->
+  <path d="M50 300 L550 300 M50 240 L550 240 M50 180 L550 180 M50 120 L550 120" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+  
+  <!-- UN SDGs Globe Ring -->
+  <circle cx="300" cy="190" r="90" stroke="url(#coralGrad)" stroke-width="2" fill="none" opacity="0.3" stroke-dasharray="6 6"/>
+  <circle cx="300" cy="190" r="65" stroke="url(#blueGrad)" stroke-width="2" fill="none" opacity="0.4"/>
+  
+  <!-- Analytics Chart Bars -->
+  <rect x="230" y="210" width="18" height="90" rx="4" fill="url(#blueGrad)" opacity="0.8"/>
+  <rect x="260" y="170" width="18" height="130" rx="4" fill="url(#coralGrad)"/>
+  <rect x="290" y="140" width="18" height="160" rx="4" fill="url(#blueGrad)"/>
+  <rect x="320" y="110" width="18" height="190" rx="4" fill="url(#coralGrad)"/>
+  <rect x="350" y="160" width="18" height="140" rx="4" fill="url(#blueGrad)" opacity="0.8"/>
+  
+  <!-- Trend Line -->
+  <path d="M220 220 Q 280 140, 370 120" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="370" cy="120" r="5" fill="#ff3d5a"/>
+  
+  <!-- Badge -->
+  <rect x="50" y="40" width="130" height="28" rx="14" fill="#ff3d5a" fill-opacity="0.15" stroke="#ff3d5a" stroke-opacity="0.4"/>
+  <text x="115" y="58" fill="#ff3d5a" font-family="'Poppins', sans-serif" font-size="11" font-weight="600" text-anchor="middle">UN SDGs ANALYTICS</text>
+  
+  <text x="50" y="360" fill="#ffffff" font-family="'Poppins', sans-serif" font-size="18" font-weight="700">Data Analytics with AI</text>
+  <text x="50" y="380" fill="#9da3b4" font-family="'Poppins', sans-serif" font-size="12">BharatCares &amp; IBM SkillsBuild Virtual Internship</text>
+</svg>

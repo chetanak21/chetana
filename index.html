@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chetana Kolhe | AI &amp; Data Science Student</title>
+  <meta name="description" content="Portfolio of Chetana Kolhe — 2nd-year Artificial Intelligence &amp; Data Science undergraduate at RCPIT Shirpur. IBM SkillsBuild Intern &amp; Builder.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Google Fonts: Poppins & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- GSAP & Plugins CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+  <!-- Canvas Confetti CDN (for Easter Egg & Form Success) -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <!-- EmailJS Browser SDK CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+  <!-- Cursor Spotlight Overlay (Desktop Only) -->
+  <div class="cursor-spotlight" id="cursorSpotlight"></div>
+
+  <!-- Top Scroll Progress Bar -->
+  <div class="top-progress-bar" id="topProgressBar"></div>
+
+  <!-- Custom Cursor (Desktop Only) -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- LOADER SCREEN -->
+  <div class="loader-overlay" id="loaderOverlay">
+    <div class="loader-line" id="loaderLine"></div>
+    <div class="loader-content">
+      <div class="loader-shapes">
+        <div class="cube cube-1"></div>
+        <div class="cube cube-2"></div>
+        <div class="ball ball-1"></div>
+        <div class="ball ball-2"></div>
+      </div>
+      <div class="loader-counter-wrap">
+        <span class="loader-counter" id="loaderCounter">0</span><span class="loader-pct">%</span>
+      </div>
+      <p class="loader-sub">Initializing Chetana's Portfolio...</p>
+    </div>
+    <!-- Curtain Split Reveal Panels -->
+    <div class="loader-curtain curtain-top"></div>
+    <div class="loader-curtain curtain-bottom"></div>
+  </div>
+
+  <!-- FIXED TOP NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#cover" class="nav-logo" data-nav-target="#cover" data-scramble="Chetana.">
+        Chetana<span class="accent-dot">.</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="nav-links">
+        <a href="#cover" class="nav-link active" data-nav-target="#cover" data-scramble="Home">Home</a>
+        <a href="#home" class="nav-link" data-nav-target="#home" data-scramble="Intro">Intro</a>
+        <a href="#about" class="nav-link" data-nav-target="#about" data-scramble="About">About</a>
+        <a href="#exploring" class="nav-link" data-nav-target="#exploring" data-scramble="Exploring">Exploring</a>
+        <a href="#skills" class="nav-link" data-nav-target="#skills" data-scramble="Skills">Skills</a>
+        <a href="#certificates" class="nav-link" data-nav-target="#certificates" data-scramble="Certificates">Certificates</a>
+        <a href="#projects" class="nav-link" data-nav-target="#projects" data-scramble="Projects">Projects</a>
+        <a href="#contact" class="nav-link" data-nav-target="#contact" data-scramble="Contact">Contact</a>
+      </nav>
+
+      <!-- Nav Actions: Theme Toggle, Resume & Contact Me -->
+      <div class="nav-actions">
+        <!-- Dark/Light Theme Toggle -->
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+          <i data-lucide="sun" class="sun-icon"></i>
+          <i data-lucide="moon" class="moon-icon"></i>
+        </button>
+
+        <button class="btn btn-nav-resume open-resume-trigger" title="View Verified Resume">
+          <i data-lucide="file-text"></i>
+          <span>Resume</span>
+        </button>
+        <a href="#contact" class="btn btn-outline btn-contact-me" data-nav-target="#contact">Contact Me</a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#cover" class="mobile-link active" data-nav-target="#cover">00. Home</a>
+      <a href="#home" class="mobile-link" data-nav-target="#home">01. Intro</a>
+      <a href="#about" class="mobile-link" data-nav-target="#about">02. About</a>
+      <a href="#exploring" class="mobile-link" data-nav-target="#exploring">03. What I'm Exploring</a>
+      <a href="#skills" class="mobile-link" data-nav-target="#skills">04. Skills</a>
+      <a href="#certificates" class="mobile-link" data-nav-target="#certificates">05. Certificates</a>
+      <a href="#projects" class="mobile-link" data-nav-target="#projects">06. My Projects</a>
+      <a href="#contact" class="mobile-link" data-nav-target="#contact">07. Contact</a>
+      <div class="mobile-nav-cta">
+        <button class="btn btn-outline open-resume-trigger w-100 mb-2">View Verified CV</button>
+        <a href="#contact" class="btn btn-accent w-100" data-nav-target="#contact">Get In Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- VERTICAL PAGE PROGRESS INDICATOR (Right Edge) -->
+  <aside class="vertical-progress" id="verticalProgress" aria-label="Page navigation">
+    <div class="v-step active" data-target="#cover" title="Cover">
+      <span class="v-num">00</span>
+      <span class="v-dot"></span>
+      <span class="v-label">Cover</span>
+    </div>
+    <div class="v-step" data-target="#home" title="Intro">
+      <span class="v-num">01</span>
+      <span class="v-dot"></span>
+      <span class="v-label">Intro</span>
+    </div>
+    <div class="v-step" data-target="#about" title="About">
+      <span class="v-num">02</span>
+      <span class="v-dot"></span>
+      <span class="v-label">About</span>
+    </div>
+    <div class="v-step" data-target="#exploring" title="Exploring">
+      <span class="v-num">03</span>
+      <span class="v-dot"></span>
+      <span class="v-label">Exploring</span>
+    </div>
+    <div class="v-step" data-target="#skills" title="Skills">
+      <span class="v-num">04</span>
+      <span class="v-dot"></span>
+      <span class="v-label">Skills</span>
+    </div>
+    <div class="v-step" data-target="#certificates" title="Certificates">
+      <span class="v-num">05</span>
+      <span class="v-dot"></span>
+      <span class="v-label">Certs</span>
+    </div>
+    <div class="v-step" data-target="#projects" title="Projects">
+      <span class="v-num">06</span>
+      <span class="v-dot"></span>
+      <span class="v-label">Projects</span>
+    </div>
+    <div class="v-step" data-target="#contact" title="Contact">
+      <span class="v-num">07</span>
+      <span class="v-dot"></span>
+      <span class="v-label">Contact</span>
+    </div>
+  </aside>
+
+  <!-- MAIN SCROLL CONTAINER -->
+  <main class="page-container" id="pageContainer">
+
+    <!-- ==============================================
+         PAGE 0: COVER PAGE (100vh Full Screen)
+         ============================================== -->
+    <section class="page-section page-cover" id="cover">
+      <!-- Ambient Background Glow & Particles -->
+      <div class="ambient-mesh">
+        <div class="mesh-blob blob-1"></div>
+        <div class="mesh-blob blob-2"></div>
+      </div>
+      <div class="particles-canvas" id="particlesCanvas"></div>
+
+      <div class="cover-content">
+        <span class="cover-kicker">ENGINEERING PORTFOLIO</span>
+        <h1 class="cover-title" data-scramble="PORTFOLIO">PORTFOLIO</h1>
+        <div class="cover-author-line">
+          <span class="author-name">Chetana Kolhe</span>
+          <span class="author-sep">·</span>
+          <span class="author-year">2026</span>
+        </div>
+        <p class="cover-caption">
+          2nd-Year AI &amp; Data Science Student @ <span class="text-highlight">RCPIT Shirpur</span>
+          <span class="inline-bullet">•</span>
+          Virtual Intern @ <span class="text-highlight">IBM SkillsBuild &amp; BharatCares</span>
+        </p>
+      </div>
+
+      <!-- Scroll Down Hint Bottom Left -->
+      <div class="cover-scroll-hint" data-nav-target="#home">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+        <div class="scroll-text-col">
+          <span class="scroll-line-bar"></span>
+          <span class="scroll-txt">Scroll Down</span>
+        </div>
+      </div>
+
+      <!-- Honest Modest Stats Bar -->
+      <div class="cover-stats-bar">
+        <div class="c-stat">
+          <span class="c-stat-val counter-stat" data-count="1">0</span>
+          <span class="c-stat-lbl">Internship Project</span>
+        </div>
+        <div class="c-stat-divider"></div>
+        <div class="c-stat">
+          <span class="c-stat-val">2nd Year</span>
+          <span class="c-stat-lbl">AI &amp; DS Undergraduate</span>
+        </div>
+        <div class="c-stat-divider"></div>
+        <div class="c-stat">
+          <span class="c-stat-val counter-stat" data-count="5">0</span><span class="c-stat-plus">+</span>
+          <span class="c-stat-lbl">Skills Learning</span>
+        </div>
+        <div class="c-stat-divider"></div>
+        <div class="c-stat">
+          <span class="c-stat-val">799</span>
+          <span class="c-stat-lbl">CodeChef 1★</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         PAGE 1: INTRO / HOME (100vh Full Screen)
+         Large 70-80vh Bottom-Aligned Cutout Photo
+         ============================================== -->
+    <section class="page-section page-home" id="home">
+      <div class="section-inner">
+        <div class="home-grid">
+          
+          <!-- Left Column: Typography & CTAs -->
+          <div class="home-text-col">
+            <div class="welcome-pill">
+              <span class="pulse-indicator"></span>
+              <span>Welcome to my portfolio</span>
+            </div>
+
+            <!-- Heading with Typewriter Letter Reveal -->
+            <h1 class="home-name-heading">
+              Hi, I'm <span class="accent-text" id="typewriterTarget">Chetana Kolhe</span>
+            </h1>
+
+            <!-- Second Typewriter Looping Roles -->
+            <div class="role-wrapper">
+              <span class="role-static">I am a&nbsp;</span>
+              <span class="role-dynamic" id="roleText"></span>
+              <span class="typing-cursor">|</span>
+            </div>
+
+            <p class="home-tagline">Turning data into smart ideas.</p>
+
+            <p class="home-description">
+              2nd-year AI &amp; Data Science student at RCPIT Shirpur. Learning machine learning fundamentals, data analysis, and building hands-on cybersecurity projects.
+            </p>
+
+            <!-- Buttons -->
+            <div class="home-buttons">
+              <a href="#projects" class="btn btn-accent magnetic" data-nav-target="#projects">
+                <span>View Projects</span>
+                <i data-lucide="arrow-right"></i>
+              </a>
+              <button class="btn btn-outline open-resume-trigger magnetic">
+                <i data-lucide="download"></i>
+                <span>Download CV</span>
+              </button>
+            </div>
+
+            <!-- Round Social Icons -->
+            <div class="home-socials">
+              <span class="socials-label">Connect:</span>
+              <div class="social-icons-group">
+                <a href="https://github.com/chetanak21" target="_blank" rel="noopener noreferrer" class="social-icon magnetic" title="GitHub Profile">
+                  <svg class="svg-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/chetanakolhe-175826397" target="_blank" rel="noopener noreferrer" class="social-icon magnetic" title="LinkedIn Profile">
+                  <svg class="svg-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="https://www.codechef.com/users/chetana_kolhe" target="_blank" rel="noopener noreferrer" class="social-icon magnetic" title="CodeChef: chetana_kolhe (1★ 799)">
+                  <i data-lucide="code"></i>
+                </a>
+                <a href="mailto:chetana9960@gmail.com" class="social-icon magnetic" title="Send Email">
+                  <i data-lucide="mail"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Large 70-80vh Bottom-Aligned Cutout Photo with Parallax -->
+          <div class="home-photo-col" id="heroPhotoParallax">
+            <div class="hero-cutout-container">
+              <!-- Soft Accent Glow behind her -->
+              <div class="hero-cutout-glow"></div>
+
+              <!-- Transparent Cutout Standing on Page (NO box, NO circle, NO border) -->
+              <img src="images/chetana.png" alt="Chetana Kolhe Cutout Portrait" class="hero-cutout-img" id="heroCutoutImg">
+
+              <!-- 4 Floating Sticker Badges with Parallax Shift -->
+              <div class="hero-sticker sticker-code" data-parallax-depth="25" title="Python Fundamentals">
+                <span class="sticker-ico"><i data-lucide="code-2"></i></span>
+                <span class="sticker-lbl">Python</span>
+              </div>
+
+              <div class="hero-sticker sticker-chart" data-parallax-depth="-30" title="Data Analytics">
+                <span class="sticker-ico"><i data-lucide="bar-chart-3"></i></span>
+                <span class="sticker-lbl">Data Analysis</span>
+              </div>
+
+              <div class="hero-sticker sticker-brain" data-parallax-depth="35" title="AI & Machine Learning">
+                <span class="sticker-ico"><i data-lucide="brain"></i></span>
+                <span class="sticker-lbl">AI &amp; ML</span>
+              </div>
+
+              <div class="hero-sticker sticker-shield" data-parallax-depth="-20" title="Cybersecurity Anomaly Detection">
+                <span class="sticker-ico"><i data-lucide="shield-alert"></i></span>
+                <span class="sticker-lbl">Cyber Threat AI</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         PAGE 2: ABOUT ME (01) (100vh Full Screen)
+         Vertically Centered Layout with Balanced Cutout Photo
+         ============================================== -->
+    <section class="page-section page-about" id="about">
+      <div class="section-inner">
+        <!-- Section Tag with Number and Line -->
+        <div class="section-tag-header">
+          <span class="tag-number">01</span>
+          <span class="tag-divider"></span>
+          <span class="tag-title">DISCOVER</span>
+        </div>
+
+        <h2 class="section-heading" data-scramble="About Me">About <span class="accent-text">Me</span></h2>
+
+        <div class="about-grid">
+          <!-- Left: Vertically Centered Larger Cutout Photo (NO box, NO frame) -->
+          <div class="about-photo-col">
+            <div class="about-cutout-wrapper">
+              <div class="about-cutout-glow"></div>
+              <img src="images/chetana.png" alt="Chetana Kolhe cutout portrait" class="about-cutout-img">
+            </div>
+          </div>
+
+          <!-- Right: Honest Bio & Outlined Info Box -->
+          <div class="about-details-col">
+            <p class="about-lead">
+              I am a 2nd-year Artificial Intelligence &amp; Data Science engineering student at RCPIT Shirpur, enthusiastic about applying data tools to solve real problems.
+            </p>
+
+            <p class="about-paragraph">
+              Having recently completed the <strong class="text-white">IBM SkillsBuild &amp; AICTE Virtual Internship</strong>, I built an AI anomaly detection system for banking cyber threats. I am focused on mastering Python, data analytics (Pandas &amp; NumPy), and foundational machine learning, combining clear logic with creative problem solving.
+            </p>
+
+            <!-- Honest Outlined Info Box -->
+            <div class="outlined-info-box">
+              <div class="info-row">
+                <div class="info-item">
+                  <span class="info-label">Name:</span>
+                  <span class="info-val">Chetana Kolhe</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Education:</span>
+                  <span class="info-val">2nd Year B.Tech AI &amp; DS @ RCPIT</span>
+                </div>
+              </div>
+              <div class="info-row">
+                <div class="info-item">
+                  <span class="info-label">Location:</span>
+                  <span class="info-val">Shirpur, Maharashtra, India</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Internship:</span>
+                  <span class="info-val">IBM SkillsBuild / BharatCares</span>
+                </div>
+              </div>
+              <div class="info-row">
+                <div class="info-item">
+                  <span class="info-label">Email:</span>
+                  <a href="mailto:chetana9960@gmail.com" class="info-val text-accent">chetana9960@gmail.com</a>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Availability:</span>
+                  <span class="info-val status-open">
+                    <span class="status-dot"></span> Open for Student Internships
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action button -->
+            <div class="about-action">
+              <button class="btn btn-accent open-resume-trigger magnetic">
+                <i data-lucide="download"></i>
+                <span>Download Verified CV</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         PAGE 3: WHAT I'M EXPLORING (02) (100vh Full Screen)
+         Replaced "Specializations" with "What I'm Exploring"
+         ============================================== -->
+    <section class="page-section page-services page-exploring" id="exploring">
+      <div class="section-inner">
+        <!-- Section Tag with Number and Line -->
+        <div class="section-tag-header">
+          <span class="tag-number">02</span>
+          <span class="tag-divider"></span>
+          <span class="tag-title">CURRENTLY LEARNING</span>
+        </div>
+
+        <h2 class="section-heading" data-scramble="What I'm Exploring">What I'm <span class="accent-text">Exploring</span></h2>
+        <p class="section-subheading">Building strong fundamentals through hands-on practice, curiosity, and code.</p>
+
+        <!-- 6 Honest Outlined Cards in a 3x2 Grid (Fills with accent color on hover) -->
+        <div class="services-grid" id="exploringGrid">
+          
+          <!-- Card 1 -->
+          <div class="service-card" tabindex="0">
+            <div class="service-icon-box">
+              <i data-lucide="terminal"></i>
+            </div>
+            <h3 class="service-title">Python Programming</h3>
+            <p class="service-desc">
+              Building strong fundamentals in data structures, OOP logic, scripting, and clean problem solving.
+            </p>
+            <span class="service-num">01</span>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="service-card" tabindex="0">
+            <div class="service-icon-box">
+              <i data-lucide="brain"></i>
+            </div>
+            <h3 class="service-title">Machine Learning Basics</h3>
+            <p class="service-desc">
+              Understanding core supervised and unsupervised models, evaluation metrics, and scikit-learn workflows.
+            </p>
+            <span class="service-num">02</span>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="service-card" tabindex="0">
+            <div class="service-icon-box">
+              <i data-lucide="database"></i>
+            </div>
+            <h3 class="service-title">Data Analysis (Pandas, NumPy)</h3>
+            <p class="service-desc">
+              Cleaning messy datasets, performing exploratory analysis (EDA), and extracting statistical insights.
+            </p>
+            <span class="service-num">03</span>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="service-card" tabindex="0">
+            <div class="service-icon-box">
+              <i data-lucide="bar-chart-2"></i>
+            </div>
+            <h3 class="service-title">Data Visualization</h3>
+            <p class="service-desc">
+              Learning by doing: turning numbers into clear charts with Matplotlib, Seaborn, and clean visuals.
+            </p>
+            <span class="service-num">04</span>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="service-card" tabindex="0">
+            <div class="service-icon-box">
+              <i data-lucide="shield-check"></i>
+            </div>
+            <h3 class="service-title">AI for Cybersecurity</h3>
+            <p class="service-desc">
+              Investigating anomaly detection and fraud patterns in digital banking datasets from my IBM internship.
+            </p>
+            <span class="service-num">05</span>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="service-card" tabindex="0">
+            <div class="service-icon-box">
+              <i data-lucide="layout"></i>
+            </div>
+            <h3 class="service-title">Web Basics (HTML/CSS/JS)</h3>
+            <p class="service-desc">
+              Building responsive, accessible web layouts and dashboard components to showcase data projects.
+            </p>
+            <span class="service-num">06</span>
+          </div>
+
+        </div>
+
+        <!-- Honest Motto Line -->
+        <div class="exploring-motto">
+          <p>Still learning, always building 🚀</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         INFINITE SKILLS MARQUEE STRIP
+         ============================================== -->
+    <div class="marquee-strip" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-item">Python</span>
+        <span class="marquee-dot">•</span>
+        <span class="marquee-item">Pandas</span>
+        <span class="marquee-dot">•</span>
+        <span class="marquee-item">NumPy</span>
+        <span class="marquee-dot">•</span>
+        <span class="marquee-item">SQL</span>
+        <span class="marquee-dot">•</span>
+        <span class="marquee-item">Machine Learning</span>
+        <span class="marquee-dot">•</span>
+        <span class="marquee-item">Power BI</span>
+        <span class="marquee-dot">•</span>
+        <span class="marquee-item">Cybersecurity</span>
+        <span class="marquee-dot">•</span>
+        <span class="marquee-item">GitHub</span>
+        <span class="marquee-dot">•</span>
+        <span class="marquee-item">Data Analytics</span>
+        <span class="marquee-dot">•</span>
+        <span class="marquee-item">Scikit-Learn</span>
+        <span class="marquee-dot">•</span>
+        <!-- Duplicate for continuous loop -->
+        <span class="marquee-item">Python</span>
+        <span class="marquee-dot">•</span>
+        <span class="marquee-item">Pandas</span>
+        <span class="marquee-dot">•</span>
+        <span class="marquee-item">NumPy</span>
+        <span class="marquee-dot">•</span>
+        <span class="marquee-item">SQL</span>
+        <span class="marquee-dot">•</span>
+        <span class="marquee-item">Machine Learning</span>
+        <span class="marquee-dot">•</span>
+        <span class="marquee-item">Power BI</span>
+        <span class="marquee-dot">•</span>
+        <span class="marquee-item">Cybersecurity</span>
+        <span class="marquee-dot">•</span>
+        <span class="marquee-item">GitHub</span>
+        <span class="marquee-dot">•</span>
+        <span class="marquee-item">Data Analytics</span>
+        <span class="marquee-dot">•</span>
+        <span class="marquee-item">Scikit-Learn</span>
+        <span class="marquee-dot">•</span>
+      </div>
+    </div>
+
+    <!-- ==============================================
+         PAGE 4: SKILLS & JOURNEY (03) (100vh Full Screen)
+         ============================================== -->
+    <section class="page-section page-skills" id="skills">
+      <div class="section-inner">
+        <!-- Section Tag with Number and Line -->
+        <div class="section-tag-header">
+          <span class="tag-number">03</span>
+          <span class="tag-divider"></span>
+          <span class="tag-title">EXPERTISE</span>
+        </div>
+
+        <h2 class="section-heading" data-scramble="Skills & Journey">Skills &amp; <span class="accent-text">Journey</span></h2>
+
+        <div class="skills-grid">
+          
+          <!-- Left Column: Animated Skill Progress Sliders -->
+          <div class="skills-col">
+            <h3 class="col-title">
+              <i data-lucide="code"></i>
+              <span>Core Proficiencies</span>
+            </h3>
+
+            <div class="skills-bars-container">
+              
+              <!-- Skill Item 1 -->
+              <div class="skill-bar-item" data-percent="88">
+                <div class="skill-meta">
+                  <span class="skill-name">Python Programming</span>
+                  <span class="skill-pct">88%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill"></div>
+                </div>
+              </div>
+
+              <!-- Skill Item 2 -->
+              <div class="skill-bar-item" data-percent="80">
+                <div class="skill-meta">
+                  <span class="skill-name">Data Analytics (Pandas, NumPy)</span>
+                  <span class="skill-pct">80%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill"></div>
+                </div>
+              </div>
+
+              <!-- Skill Item 3 -->
+              <div class="skill-bar-item" data-percent="75">
+                <div class="skill-meta">
+                  <span class="skill-name">Machine Learning Basics</span>
+                  <span class="skill-pct">75%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill"></div>
+                </div>
+              </div>
+
+              <!-- Skill Item 4 -->
+              <div class="skill-bar-item" data-percent="78">
+                <div class="skill-meta">
+                  <span class="skill-name">Data Structures in C &amp; Java</span>
+                  <span class="skill-pct">78%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill"></div>
+                </div>
+              </div>
+
+              <!-- Skill Item 5 -->
+              <div class="skill-bar-item" data-percent="72">
+                <div class="skill-meta">
+                  <span class="skill-name">AI Anomaly Detection Concepts</span>
+                  <span class="skill-pct">72%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill"></div>
+                </div>
+              </div>
+
+              <!-- Skill Item 6 -->
+              <div class="skill-bar-item" data-percent="85">
+                <div class="skill-meta">
+                  <span class="skill-name">Tools: Git, GitHub, VS Code, Excel</span>
+                  <span class="skill-pct">85%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill"></div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Hobbies & Interests Row -->
+            <div class="hobbies-container">
+              <span class="hobbies-label">Hobbies &amp; Interests:</span>
+              <div class="hobbies-pills">
+                <span class="hobby-pill" title="Competitive Logic Solving"><i data-lucide="cpu"></i> Code Puzzles</span>
+                <span class="hobby-pill" title="Data & AI Trends"><i data-lucide="sparkles"></i> AI Research</span>
+                <span class="hobby-pill" title="Graphic & Visual Design"><i data-lucide="palette"></i> Design &amp; Graphics</span>
+                <span class="hobby-pill" title="Team Problem Solving"><i data-lucide="users"></i> Hackathons</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Vertical Timeline -->
+          <div class="timeline-col">
+            <h3 class="col-title">
+              <i data-lucide="calendar"></i>
+              <span>Experience &amp; Education</span>
+            </h3>
+
+            <div class="vertical-timeline">
+              
+              <!-- Timeline Item 1 (Internship) -->
+              <div class="timeline-item active-timeline">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">August 2026 – Present (Current)</span>
+                  <h4 class="timeline-role">Data Analytics with AI — Virtual Intern</h4>
+                  <p class="timeline-org">BharatCares (in collaboration with AICTE &amp; IBM SkillsBuild)</p>
+                  <p class="timeline-desc">
+                    Completed 6-week virtual training on predictive modeling and AI anomaly detection applied to digital banking and UN SDG indicators.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Timeline Item 2 (Education) -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2025 – November 2029</span>
+                  <h4 class="timeline-role">B.Tech in Artificial Intelligence &amp; Data Science</h4>
+                  <p class="timeline-org">R. C. Patel Institute of Technology (RCPIT), Shirpur</p>
+                  <p class="timeline-desc">
+                    Currently in 2nd year. Core coursework: Python, Data Structures &amp; Algorithms, Mathematics, and Data Science.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Timeline Item 3 (Marketing Internship) -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">December 2025 – April 2026 (5 months)</span>
+                  <h4 class="timeline-role">Marketing Intern</h4>
+                  <p class="timeline-org">Aaditya COEP, Pune</p>
+                  <p class="timeline-desc">
+                    Coordinated digital campaigns, designed visual communication banners, and collaborated in cross-functional student teams.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Timeline Item 4 (HSC) -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2024 – 2025</span>
+                  <h4 class="timeline-role">Higher Secondary Certificate (HSC) — 72%</h4>
+                  <p class="timeline-org">Rashtriya Junior College, Chalisgaon</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         CERTIFICATES & ACHIEVEMENTS STRIP
+         ============================================== -->
+    <section class="page-section page-certificates" id="certificates">
+      <div class="section-inner">
+        <div class="section-tag-header">
+          <span class="tag-number">05</span>
+          <span class="tag-divider"></span>
+          <span class="tag-title">ACHIEVEMENTS</span>
+        </div>
+
+        <h2 class="section-heading" data-scramble="Certificates">Certificates &amp; <span class="accent-text">Achievements</span></h2>
+        <p class="section-subheading">Validated learning through recognized certifications and courses.</p>
+
+        <div class="certificates-grid" id="certificatesGrid">
+
+          <!-- Certificate 1 -->
+          <div class="cert-card" tabindex="0">
+            <div class="cert-icon-wrap">
+              <i data-lucide="award"></i>
+            </div>
+            <div class="cert-body">
+              <h4 class="cert-title">Data Analytics with AI</h4>
+              <p class="cert-issuer">AICTE &amp; IBM SkillsBuild</p>
+              <span class="cert-badge">✅ Verified</span>
+            </div>
+          </div>
+
+          <!-- Certificate 2 -->
+          <div class="cert-card" tabindex="0">
+            <div class="cert-icon-wrap">
+              <i data-lucide="code"></i>
+            </div>
+            <div class="cert-body">
+              <h4 class="cert-title">DSA in C Programming</h4>
+              <p class="cert-issuer">Certificate of Completion — All Lessons &amp; Projects</p>
+              <span class="cert-badge">✅ Verified</span>
+            </div>
+          </div>
+
+          <!-- Certificate 3 -->
+          <div class="cert-card" tabindex="0">
+            <div class="cert-icon-wrap">
+              <i data-lucide="coffee"></i>
+            </div>
+            <div class="cert-body">
+              <h4 class="cert-title">Learn Java Programming</h4>
+              <p class="cert-issuer">Certificate of Completion — All Lessons &amp; Projects</p>
+              <span class="cert-badge">✅ Verified</span>
+            </div>
+          </div>
+
+          <!-- Certificate 4 -->
+          <div class="cert-card" tabindex="0">
+            <div class="cert-icon-wrap">
+              <i data-lucide="git-branch"></i>
+            </div>
+            <div class="cert-body">
+              <h4 class="cert-title">Intro to Git</h4>
+              <p class="cert-issuer">Version Control Fundamentals</p>
+              <span class="cert-badge">✅ Verified</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         PAGE 5: PROJECTS (06) (100vh Full Screen)
+         Replaced empty grid with:
+         1 Large Featured Project + 2 Intentional "Coming Soon" Cards
+         ============================================== -->
+    <section class="page-section page-projects" id="projects">
+      <div class="section-inner">
+        <!-- Section Tag with Number and Line -->
+        <div class="section-tag-header">
+          <span class="tag-number">06</span>
+          <span class="tag-divider"></span>
+          <span class="tag-title">SHOWCASE</span>
+        </div>
+
+        <div class="projects-header-flex">
+          <div>
+            <h2 class="section-heading" data-scramble="My Projects">My <span class="accent-text">Projects</span></h2>
+            <p class="section-subheading">Practical applications and models built during coursework and internships.</p>
+          </div>
+        </div>
+
+        <!-- Projects Layout: 1 Featured Card + 2 Coming Soon Cards -->
+        <div class="projects-layout-grid" id="projectsLayoutGrid">
+          
+          <!-- Large Featured Project Card -->
+          <div class="featured-project-card" id="featuredProjectCard">
+            <div class="featured-thumb-container">
+              <img src="images/project-cybersecurity.svg" alt="AI Cyber Threat Detection Project Thumbnail" class="featured-thumb-img">
+              <div class="featured-badge-overlay">
+                <span class="featured-badge">⭐ FEATURED INTERNSHIP PROJECT</span>
+              </div>
+            </div>
+
+            <div class="featured-project-body">
+              <div class="project-meta-row">
+                <span class="project-domain-pill">AI / DATA SCIENCE / CYBERSECURITY</span>
+                <span class="project-tag-source">IBM SkillsBuild Internship Project</span>
+              </div>
+
+              <h3 class="featured-project-title">AI Cyber Threat &amp; Anomaly Detection in Digital Banking</h3>
+              
+              <p class="featured-project-desc">
+                A Python-based project that detects suspicious activity and anomalies in digital banking data using AI, built during my IBM SkillsBuild internship. Implements unsupervised statistical anomaly scoring to identify fraudulent transactions and unusual geo-drifts.
+              </p>
+
+              <div class="featured-tech-chips">
+                <span class="tech-chip">Python</span>
+                <span class="tech-chip">Scikit-Learn</span>
+                <span class="tech-chip">Pandas</span>
+                <span class="tech-chip">NumPy</span>
+                <span class="tech-chip">Streamlit / Flask</span>
+                <span class="tech-chip">Anomaly Detection</span>
+              </div>
+
+              <div class="featured-action-row">
+                <a href="https://github.com/chetanak21/AI-Cyber-Threat-Detection" target="_blank" rel="noopener noreferrer" class="btn btn-accent magnetic" title="View Source Code on GitHub">
+                  <svg class="svg-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>View on GitHub</span>
+                </a>
+                
+                <button class="btn btn-outline open-case-study-btn magnetic" id="openCaseStudyBtn" title="Read Detailed Project Case Study">
+                  <i data-lucide="book-open"></i>
+                  <span>Project Report &amp; Case Study</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Intentional Dashed-Border "Coming Soon" Cards -->
+          <div class="coming-soon-column">
+            
+            <div class="coming-soon-card" tabindex="0">
+              <div class="cs-badge">IN PROGRESS</div>
+              <div class="cs-icon-wrap">
+                <i data-lucide="sparkles"></i>
+              </div>
+              <h4 class="cs-title">Predictive Health Metrics Modeling</h4>
+              <p class="cs-desc">
+                Exploratory data analysis and predictive classification on clinical indicators. Next project in progress...
+              </p>
+              <div class="cs-tags">
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>Scikit-Learn</span>
+              </div>
+            </div>
+
+            <div class="coming-soon-card" tabindex="0">
+              <div class="cs-badge">PLANNED</div>
+              <div class="cs-icon-wrap">
+                <i data-lucide="layout"></i>
+              </div>
+              <h4 class="cs-title">Interactive Data Insights Dashboard</h4>
+              <p class="cs-desc">
+                Interactive web dashboard communicating real-time analytics with clean visual UI and Python backend.
+              </p>
+              <div class="cs-tags">
+                <span>Power BI</span>
+                <span>Web Basics</span>
+                <span>Dashboards</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         PAGE 6: CONTACT (07) (100vh Full Screen)
+         Smart Auto-Reply Contact Form
+         ============================================== -->
+    <section class="page-section page-contact" id="contact">
+      <div class="section-inner">
+        <!-- Section Tag with Number and Line -->
+        <div class="section-tag-header">
+          <span class="tag-number">07</span>
+          <span class="tag-divider"></span>
+          <span class="tag-title">GET IN TOUCH</span>
+        </div>
+
+        <h2 class="section-heading" data-scramble="Let's Talk">Let's <span class="accent-text">Talk</span></h2>
+        <p class="section-subheading">Interested in discussing student internships, project collaborations, or technical questions? Send me a message!</p>
+
+        <div class="contact-grid">
+          
+          <!-- Left: Smart Auto-Reply Form -->
+          <div class="contact-form-col">
+            <div class="contact-form-card" id="contactFormCard">
+              
+              <form class="contact-form" id="contactForm">
+                <!-- Anti-spam honeypot field -->
+                <input type="text" name="bot_check" id="botCheck" style="display:none;" tabindex="-1" autocomplete="off">
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="userName">Your Name *</label>
+                    <input type="text" id="userName" name="name" required placeholder="e.g. Rahul Sharma" autocomplete="name">
+                  </div>
+                  <div class="form-group">
+                    <label for="userEmail">Your Email *</label>
+                    <input type="email" id="userEmail" name="email" required placeholder="name@company.com" autocomplete="email">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="userSubject">Subject</label>
+                  <input type="text" id="userSubject" name="subject" placeholder="Internship Inquiry / Project Collaboration">
+                </div>
+
+                <div class="form-group">
+                  <label for="userMessage">Message *</label>
+                  <textarea id="userMessage" name="message" rows="4" required placeholder="Hi Chetana, I came across your portfolio and would like to connect regarding..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-accent btn-send magnetic" id="submitBtn">
+                  <span class="btn-text">Send Message</span>
+                  <i data-lucide="send" class="btn-icon"></i>
+                  <div class="spinner-loader" style="display:none;"></div>
+                </button>
+
+                <div class="form-cooldown-notice" id="formCooldownNotice"></div>
+              </form>
+
+              <!-- Chat-Style Smart Auto-Reply Bubble (shown after send) -->
+              <div class="auto-reply-container" id="autoReplyContainer" style="display: none;">
+                <!-- Typing Indicator state -->
+                <div class="chat-typing-bubble" id="chatTypingBubble">
+                  <div class="chat-avatar">CK</div>
+                  <div class="typing-dots">
+                    <span></span><span></span><span></span>
+                  </div>
+                </div>
+
+                <!-- Personalized Reply Message -->
+                <div class="chat-reply-bubble" id="chatReplyBubble" style="display: none;">
+                  <div class="chat-avatar">CK</div>
+                  <div class="chat-reply-content">
+                    <div class="reply-header">
+                      <strong>Chetana Kolhe</strong>
+                      <span class="reply-time">Just now</span>
+                    </div>
+                    <p class="reply-body" id="replyBodyText"></p>
+                    <div class="reply-actions">
+                      <a href="#projects" class="btn btn-accent btn-sm" data-nav-target="#projects">
+                        <span>View Featured Project</span>
+                        <i data-lucide="arrow-right"></i>
+                      </a>
+                      <button class="btn btn-outline btn-sm" id="sendAnotherBtn">
+                        <span>Send Another Note</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right: Direct Contact Info & Socials -->
+          <div class="contact-info-col">
+            <div class="info-card">
+              <h3 class="info-card-title">Direct Contact Channels</h3>
+              <p class="info-card-desc">Always happy to talk about artificial intelligence, data projects, and learning opportunities.</p>
+
+              <div class="contact-channels">
+                
+                <!-- Email Item -->
+                <div class="channel-item">
+                  <div class="channel-icon"><i data-lucide="mail"></i></div>
+                  <div class="channel-text">
+                    <span class="channel-lbl">EMAIL</span>
+                    <a href="mailto:chetana9960@gmail.com" class="channel-val">chetana9960@gmail.com</a>
+                  </div>
+                  <button class="channel-copy-btn" data-copy="chetana9960@gmail.com" title="Copy Email">
+                    <i data-lucide="copy"></i>
+                  </button>
+                </div>
+
+                <!-- Phone Item -->
+                <div class="channel-item">
+                  <div class="channel-icon"><i data-lucide="phone"></i></div>
+                  <div class="channel-text">
+                    <span class="channel-lbl">PHONE / WHATSAPP</span>
+                    <a href="tel:+919960757106" class="channel-val">+91-9960757106</a>
+                  </div>
+                  <button class="channel-copy-btn" data-copy="+919960757106" title="Copy Phone">
+                    <i data-lucide="copy"></i>
+                  </button>
+                </div>
+
+                <!-- Location Item -->
+                <div class="channel-item">
+                  <div class="channel-icon"><i data-lucide="map-pin"></i></div>
+                  <div class="channel-text">
+                    <span class="channel-lbl">LOCATION</span>
+                    <span class="channel-val">Shirpur, Maharashtra, India</span>
+                  </div>
+                </div>
+
+                <!-- CodeChef Profile -->
+                <div class="channel-item">
+                  <div class="channel-icon"><i data-lucide="code"></i></div>
+                  <div class="channel-text">
+                    <span class="channel-lbl">CODECHEF PROFILE</span>
+                    <a href="https://www.codechef.com/users/chetana_kolhe" target="_blank" rel="noopener noreferrer" class="channel-val text-accent">
+                      chetana_kolhe (1★ 799 • 888 Solved)
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Social Links with Magnetic Effect -->
+              <div class="contact-socials-box">
+                <span class="socials-box-title">Social Profiles</span>
+                <div class="socials-box-links">
+                  <a href="https://github.com/chetanak21" target="_blank" rel="noopener noreferrer" class="btn btn-social-pill magnetic">
+                    <svg class="svg-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>GitHub</span>
+                  </a>
+                  <a href="https://www.linkedin.com/in/chetanakolhe-175826397" target="_blank" rel="noopener noreferrer" class="btn btn-social-pill magnetic">
+                    <svg class="svg-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    <span>LinkedIn</span>
+                  </a>
+                  <a href="mailto:chetana9960@gmail.com" class="btn btn-social-pill magnetic">
+                    <i data-lucide="mail"></i>
+                    <span>Email</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Footer Strip with Rocket Back-to-Top -->
+        <footer class="site-footer">
+          <p class="footer-thanks">Thanks for scrolling 🙌</p>
+          <button class="btn-rocket-top" id="rocketTopBtn" title="Back to top">
+            <span>Back to top 🚀</span>
+          </button>
+          <p class="footer-credit">© 2026 Chetana Kolhe • 2nd-Year AI &amp; DS Student</p>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==============================================
+       FLOATING MINI AI CHATBOT WIDGET
+       ============================================== -->
+  <div class="chatbot-floating-wrapper" id="chatbotWrapper">
+    <!-- Chatbot Toggle Trigger -->
+    <button class="chatbot-trigger-btn" id="chatbotToggleBtn" title="Ask questions about Chetana">
+      <span class="bot-bubble-icon">🤖</span>
+      <span class="bot-trigger-text">Ask about Chetana</span>
+    </button>
+
+    <!-- Chatbot Window -->
+    <div class="chatbot-window" id="chatbotWindow" style="display: none;">
+      <div class="chatbot-header">
+        <div class="chatbot-header-info">
+          <div class="chat-status-dot"></div>
+          <div>
+            <strong>Chetana Assistant</strong>
+            <span class="chat-role-sub">Ask me anything!</span>
+          </div>
+        </div>
+        <button class="chat-close-btn" id="chatbotCloseBtn" aria-label="Close Chat">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <div class="chatbot-messages" id="chatbotMessages">
+        <div class="chat-msg bot-msg">
+          <p>Hi! 👋 I'm Chetana's virtual assistant. What would you like to know about her?</p>
+        </div>
+      </div>
+
+      <!-- Quick Chips -->
+      <div class="chatbot-chips" id="chatbotChips">
+        <button class="chat-chip" data-query="skills">🛠️ Skills</button>
+        <button class="chat-chip" data-query="project">🛡️ IBM Project</button>
+        <button class="chat-chip" data-query="education">🎓 Education</button>
+        <button class="chat-chip" data-query="certificates">📜 Certs</button>
+        <button class="chat-chip" data-query="contact">📬 Contact</button>
+      </div>
+
+      <form class="chatbot-input-row" id="chatbotForm">
+        <input type="text" id="chatbotInput" placeholder="Type a question..." autocomplete="off">
+        <button type="submit" class="chat-send-btn" aria-label="Send">
+          <i data-lucide="send"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==============================================
+       PROJECT CASE STUDY MODAL
+       ============================================== -->
+  <div class="modal-overlay" id="caseStudyModal">
+    <div class="modal-container case-study-modal-container">
+      <div class="modal-header">
+        <div class="modal-header-left">
+          <span class="modal-badge-dot"></span>
+          <span class="modal-title">Case Study — AI Cyber Threat Detection</span>
+        </div>
+        <div class="modal-header-actions">
+          <button class="modal-close-btn" id="caseStudyCloseBtn" aria-label="Close modal">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-body case-study-modal-body">
+        <div class="case-study-hero">
+          <span class="cs-hero-badge">IBM SKILLSBUILD VIRTUAL INTERNSHIP</span>
+          <h2>AI Cyber Threat &amp; Anomaly Detection in Digital Banking</h2>
+          <p class="cs-hero-sub">Detecting suspicious transaction spikes and geographic anomalies using machine learning.</p>
+        </div>
+
+        <div class="case-study-section">
+          <h3><i data-lucide="alert-triangle"></i> 1. The Problem</h3>
+          <p>
+            Digital banking transactions occur at high volume with microsecond latencies. Traditional rule-based fraud detection systems often struggle with novel attack vectors, high false-positive rates, and unexpected velocity drifts. The objective was to build an unsupervised AI pipeline capable of flagging suspicious transactions before settlement.
+          </p>
+        </div>
+
+        <div class="case-study-section">
+          <h3><i data-lucide="cpu"></i> 2. The Approach</h3>
+          <p>
+            Using transactional banking data, the model extracts behavioural features including transaction frequency, amount z-scores, velocity, and time-of-day entropy. We evaluated multiple models, focusing on <strong>Isolation Forest</strong> and <strong>One-Class SVM</strong> to score anomaly confidence without needing heavily labelled fraud data.
+          </p>
+        </div>
+
+        <div class="case-study-section">
+          <h3><i data-lucide="wrench"></i> 3. Tools &amp; Libraries Used</h3>
+          <div class="cs-tools-grid">
+            <div class="cs-tool-item"><strong>Python 3:</strong> Core modeling and data pipelines</div>
+            <div class="cs-tool-item"><strong>Pandas &amp; NumPy:</strong> Preprocessing and feature engineering</div>
+            <div class="cs-tool-item"><strong>Scikit-Learn:</strong> Anomaly detection algorithms</div>
+            <div class="cs-tool-item"><strong>Streamlit:</strong> Interactive testing dashboard demo</div>
+          </div>
+        </div>
+
+        <div class="case-study-section">
+          <h3><i data-lucide="check-circle-2"></i> 4. Results &amp; Key Learnings</h3>
+          <p>
+            The project demonstrated that isolation forest models achieved high sensitivity to outlier amounts and atypical geographic velocity shifts. Key learnings included handling skewed tabular distributions, mitigating false positives, and preparing data for production streaming.
+          </p>
+        </div>
+
+        <div class="case-study-footer-cta">
+          <a href="https://github.com/chetanak21/AI-Cyber-Threat-Detection" target="_blank" rel="noopener noreferrer" class="btn btn-accent">
+            <svg class="svg-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>Inspect Code on GitHub</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==============================================
+       VERIFIED RESUME MODAL PREVIEW
+       ============================================== -->
+  <div class="modal-overlay" id="resumeModal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-header-left">
+          <span class="modal-badge-dot"></span>
+          <span class="modal-title">Verified Resume — Chetana Kolhe</span>
+        </div>
+        <div class="modal-header-actions">
+          <button class="btn btn-modal-action" id="modalPrintBtn" title="Print or Save as PDF">
+            <i data-lucide="printer"></i>
+            <span>Print / Save PDF</span>
+          </button>
+          <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        
+        <div class="resume-header-block">
+          <h1 class="resume-name">CHETANA KOLHE</h1>
+          <p class="resume-subtitle">2nd-Year B.Tech in Artificial Intelligence and Data Science | RCPIT Shirpur</p>
+          <div class="resume-contact-row">
+            <span>Shirpur, Maharashtra, India</span>
+            <span>•</span>
+            <span>+91-9960757106</span>
+            <span>•</span>
+            <a href="mailto:chetana9960@gmail.com">chetana9960@gmail.com</a>
+          </div>
+          <div class="resume-links-row">
+            <a href="https://www.linkedin.com/in/chetanakolhe-175826397" target="_blank" rel="noopener noreferrer">linkedin.com/in/chetanakolhe-175826397</a>
+            <span>•</span>
+            <a href="https://github.com/chetanak21" target="_blank" rel="noopener noreferrer">github.com/chetanak21</a>
+          </div>
+        </div>
+
+        <!-- Career Objective -->
+        <div class="resume-section">
+          <h2 class="resume-sec-title">CAREER OBJECTIVE</h2>
+          <p class="resume-sec-content">
+            Motivated 2nd-year AI &amp; Data Science engineering undergraduate, passionate about programming, data-driven technologies, and problem-solving. Building hands-on experience in data analytics, predictive modeling, and machine learning through an active internship, alongside a foundation in digital marketing. Seeking an entry-level student role or internship to apply technical and analytical skills toward organizational growth.
+          </p>
+        </div>
+
+        <!-- Education -->
+        <div class="resume-section">
+          <h2 class="resume-sec-title">EDUCATION</h2>
+          <div class="resume-entry">
+            <div class="entry-top">
+              <strong>Bachelor of Technology in Artificial Intelligence and Data Science</strong>
+              <span class="entry-date">2025 – November 2029 (Currently in 2nd Year)</span>
+            </div>
+            <p class="entry-sub">R. C. Patel Institute of Technology, Shirpur</p>
+          </div>
+          <div class="resume-entry">
+            <div class="entry-top">
+              <strong>Higher Secondary Certificate (HSC)</strong>
+              <span class="entry-date">2024 – 2025 | Percentage: 72%</span>
+            </div>
+            <p class="entry-sub">Rashtriya Junior College, Chalisgaon</p>
+          </div>
+          <div class="resume-entry">
+            <div class="entry-top">
+              <strong>Secondary School Certificate (SSC)</strong>
+              <span class="entry-date">2022 – 2023 | Percentage: 83%</span>
+            </div>
+            <p class="entry-sub">ABC High School, Shirpur</p>
+          </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="resume-section">
+          <h2 class="resume-sec-title">TECHNICAL SKILLS</h2>
+          <ul class="resume-list">
+            <li><strong>Programming Languages:</strong> Python, C, Java</li>
+            <li><strong>Web Technologies &amp; Tools:</strong> HTML, CSS, MS Excel, MS Word, GitHub, VS Code</li>
+            <li><strong>Data &amp; Analytics:</strong> Data Analysis, Predictive Modeling, Machine Learning (foundational)</li>
+            <li><strong>Data Structures &amp; Algorithms:</strong> DSA, Algorithms, Data Structures</li>
+            <li><strong>Core Focus:</strong> Logic Building, Data Analytics, Problem Solving</li>
+          </ul>
+        </div>
+
+        <!-- Internship Experience -->
+        <div class="resume-section">
+          <h2 class="resume-sec-title">INTERNSHIP EXPERIENCE</h2>
+          <div class="resume-entry">
+            <div class="entry-top">
+              <strong>Data Analytics with AI — Virtual Intern — BharatCares (in collaboration with AICTE &amp; IBM SkillsBuild)</strong>
+              <span class="entry-date">August 2026 – Present | Shirpur</span>
+            </div>
+            <ul class="resume-list">
+              <li>Undergoing virtual internship on Data Analytics with AI, offered by BharatCares in collaboration with AICTE &amp; IBM SkillsBuild.</li>
+              <li>Developed AI Cyber Threat &amp; Anomaly Detection in Digital Banking project using Python and machine learning algorithms.</li>
+              <li>Building foundational knowledge in Data Analytics, Predictive Modeling, and Machine Learning.</li>
+            </ul>
+          </div>
+          <div class="resume-entry">
+            <div class="entry-top">
+              <strong>Marketing Intern — Aaditya COEP, Pune</strong>
+              <span class="entry-date">December 2025 – April 2026 (5 months) | Pune District</span>
+            </div>
+            <ul class="resume-list">
+              <li>Developed and executed social media strategies to promote educational content and expand platform reach.</li>
+              <li>Created visually appealing banners and graphics to boost audience engagement.</li>
+              <li>Collaborated with cross-functional teams to brainstorm creative digital marketing campaigns.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="resume-section">
+          <h2 class="resume-sec-title">CERTIFICATIONS</h2>
+          <ul class="resume-list">
+            <li><strong>DSA in C</strong> — Certificate for completing all lessons and practice projects in Learn C Programming</li>
+            <li><strong>Data Analytics with AI</strong> — AICTE | IBM SkillsBuild</li>
+            <li><strong>Learn Java Programming</strong> — Certificate for completing all lessons and practice projects in Learn Java Programming</li>
+            <li><strong>Intro to Git</strong></li>
+          </ul>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="resume-section">
+          <h2 class="resume-sec-title">SOFT SKILLS</h2>
+          <ul class="resume-list">
+            <li>Teamwork &amp; Collaboration</li>
+            <li>Effective Communication</li>
+            <li>Visual Communication &amp; Graphic Design</li>
+            <li>Adaptability &amp; Problem Solving</li>
+          </ul>
+        </div>
+
+        <!-- Declaration -->
+        <div class="resume-section">
+          <h2 class="resume-sec-title">DECLARATION</h2>
+          <p class="resume-sec-content italic">
+            I hereby declare that the above information is true to the best of my knowledge.
+          </p>
+          <div class="resume-declaration-footer">
+            <span>Place: Shirpur, Maharashtra</span>
+            <span>Signature: <strong>Chetana Kolhe</strong></span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <span class="modal-footer-note">Verified directly from authentic curriculum vitae</span>
+        <button class="btn btn-accent" id="modalCloseBtnFooter">Close Preview</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification for Easter Egg -->
+  <div class="easter-egg-toast" id="easterEggToast">
+    <span>🎉 You found a secret! Hello from Chetana!</span>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js" defer></script>
+</body>
+</html>
